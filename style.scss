@@ -1,0 +1,67 @@
+// Variable
+$primary-color: rgb(67, 58, 247);
+
+
+.outer {
+  display: grid;
+  grid-template-columns: 25% auto;
+}
+
+.blue {
+  background: linear-gradient(
+    49deg,
+    $primary-color 1%,
+    rgb(96, 88, 209) 31%,
+    rgb(243, 245, 246) 100%
+  );
+}
+
+.gray {
+  padding-left: 20px;
+  background-color: lightgray;
+}
+
+.profileImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5%;
+  padding: 10px;
+}
+
+.info {
+  padding-left: 10px;
+}
+
+nav {
+  display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Make .outer stack the sections vertically */
+  .outer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Mobile-friendly navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: $primary-color;
+    color: white;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+
+  .gray, .blue {
+    padding: 20px;
+    text-align: center;
+  }
+}
